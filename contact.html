@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="shortcut icon" href="./imgs/contact.png" type="image/x-icon">
+    <!--  Roboto font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+  <!--  qwitcher font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
+  <!--  Sweet alert library -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.2/dist/sweetalert2.min.css">
+  <!--  font Awesome library -->
+  <link rel="stylesheet" href="./css/all.min.css">
+  <!--  bootstrap css file -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <!--  css main style sheet -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!--  media Query style sheet -->
+  <link rel="stylesheet" href="./css/media.css">
+</head>
+<body class="roboto-bold dark-mood">
+
+    <!--  start nav bar -->
+<nav class="navbar navbar-expand-lg my-nav">
+    <div class="container">
+     <div class="logo-box mb-3 go-to-home">
+      <a class="me-2" href="#"> <img src="./imgs/logo.png" alt="logo-img"></a>
+      <a class="navbar-brand" href="#">Weather</a>
+     </div>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 position-relative">
+          <li class="nav-item">
+            <a class="nav-link go-to-home" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">news</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="#">live camera</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="#">photos</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link active" href="#">contact</a>
+          </li>
+           <!--  toggle button start -->
+           <div class="toggle-container ms-4">
+            <div class="inner-btn">
+              <i class="fa-regular fa-moon my-icon"></i>
+            </div>
+           </div>
+      
+           <!--  toggle button end  -->
+        </ul>
+     
+      </div>
+    </div>
+  </nav>
+
+
+<main class="contact py-5">
+    <section class="py-5">
+        <div class="container">
+
+            <div class="info-box w-100 rounded-4 p-4 mt-5 mb-5">
+                <a class="me-5 position-relative" href="index.html"> Home</a>
+                <span>Contact</span>
+            </div>
+
+
+        <div class="row py-5 g-4">
+            <div class="col-md-5">
+                <div class="inner left-box d-flex flex-column justify-content-end gap-5">
+
+                  <div class="contact-location">
+                    <i class="fa-solid fa-location-dot me-3"></i>
+                    <span>Company Name INC.
+                        2803 Avenue Street, Los Angeles</span>
+                  </div>
+
+
+                  <div class="contact-adress  d-flex  gap-4">
+                    <div class="tele">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+01346897544">+01346897544</a>
+                    </div>
+
+                     <div class="mail">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:contact@gmail.com">contact@gmail.com</a>
+                     </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 offset-md-1">
+                <div class="inner right-box">
+                     <h2 class="mb-4">Contact Us</h2>
+                     <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, illo itaque, velit tempora culpa reiciendis nostrum quam repellat ea repudiandae perspiciatis aliquam esse reprehenderit! Impedit obcaecati amet ducimus consectetur eaque!</p>
+
+                    <form class="contact-form">
+                        <div class="d-flex mb-2 first gap-3">
+                            <input type="text" placeholder="your name ..." name="user-name " autocomplete="off" class="form-control form-area">
+                            <input id="emailInput" type="email" name="user-email" placeholder="email address..." autocomplete="off" class="form-control form-area">
+                        </div>
+                      
+                        <div class="d-flex mb-2 second gap-3">
+                            <input type="text" name="user-company" placeholder="company name..." autocomplete="off" class="form-control form-area">
+                            <input  type="email" name="user-website" placeholder="website" autocomplete="off" class="form-control form-area">
+                        </div>
+
+                      <textarea name="user-message" id="userMessage" placeholder="message..." autocomplete="off" class="form-control form-area mb-3"></textarea>
+
+                      <button id="submitBtn" class="btn btn-outline-warning" type="submit">submit</button>
+                    </form>
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+            <!--  End of Row -->
+        </div>
+        </div>
+    </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.2/dist/sweetalert2.all.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/contact.js"></script>
+</body>
+</html>

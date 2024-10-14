@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="shortcut icon" href="./imgs/header.png" type="image/x-icon">
+      <!--  Roboto font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+    <!--  qwitcher font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Leaflet Library for map css file -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+
+    <!--  font Awesome library -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!--  bootstrap css file -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!--  css main style sheet -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--  media Query style sheet -->
+    <link rel="stylesheet" href="./css/media.css">
+
+</head>
+<body class="roboto-bold dark-mood">
+    
+ <!-- start nav bar --> 
+
+<nav class="navbar navbar-expand-lg my-nav">
+    <div class="container">
+     <div class="logo-box mb-3">
+      <a class="me-2" href="#"> <img src="./imgs/logo.png" alt="logo-img"></a>
+      <a class="navbar-brand" href="#">Weather</a>
+     </div>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 position-relative">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">news</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="#">live camera</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="#">photos</a>
+          </li>
+         
+          <li class="nav-item">
+            <a id="contactBtn"  class="nav-link" href="#" target="_self">contact</a>
+          </li>
+           <!--  toggle button start -->
+           <div class="toggle-container ms-4">
+            <div class="inner-btn">
+              <i class="fa-regular fa-moon my-icon"></i>
+            </div>
+           </div>
+      
+           <!--  toggle button end  -->
+        </ul>
+     
+      </div>
+    </div>
+  </nav> -->
+<!--  End navbar
+
+<!--  start main section -->
+   <main class="py-5">
+    <div class="container py-5">
+      <div class="header-box d-flex gap-2 align-items-center w-75 mx-auto mt-5 flex-wrap flex-column flex-md-row">
+        <div class="user-location  d-flex align-items-center gap-2 w-50">
+          <i class="fa-solid fa-location-dot fa-xl"></i>
+          <span class="text-capitalize h1 current-country">Saudia</span>
+        </div>
+        <div class="search-input position-relative">
+          <input id="searchInput" type="text" placeholder="find your city ..." autocomplete="off">
+        </div>
+      </div>
+
+     <div class="container">
+      <div class="row mt-5 p-5 g-3">
+
+        <div class="col-md-4">
+          <div class="inner current-data">
+            <div class="inner-time d-flex justify-content-between">
+              <span class="current-day text-capitalize h4">saturady</span>
+              <span class="current-date">20/8/2024</span>
+            </div>
+            <div class="inner-data d-flex justify-content-around align-items-center px-1">
+              <img class="w-25 current-img" src="./imgs/header.png" alt="">
+              <p class="h2 current-temp">34 <sup>o</sup> C</p>
+              <p class="text-capitalize current-condition">clear</p>
+            </div>
+            <footer class="d-flex justify-content-center align-items-center gap-4 text-center text-capitalize flex-wrap">
+            <div class="air-quality">
+              <p>wind degree</p>
+              <span class="wind-degree">87</span>
+            </div>
+            <div class="humidity">
+              <p>humidity</p>
+              <span class="current-humidity">74%</span>
+            </div>
+            <div class="visibilty">
+              <p>visibilty</p>
+              <span class="current-visibilty">10 km</span>
+            </div>
+            <div class="dew-point">
+              <p>dew point</p>
+              <span class="current-dew">24</span>
+            </div>
+            </footer>
+          </div>
+        </div>
+
+ <!--  end of first box -->
+
+ 
+        <div class="col-md-3">
+          <div class="inner next-data">
+            <div class="inner-time d-flex justify-content-between flex-wrap">
+              <span class="current-day text-capitalize h4 next-day">sunday</span>
+              <span class="current-date next-date">21/8/2024</span>
+            </div>
+            <div class="inner-data d-flex justify-content-around align-items-center flex-column">
+              <img class="w-25 current-img" src="./imgs/header.png" alt="">
+              <p class="h2 current-temp">34 <sup>o</sup> C</p>
+              <p class="text-capitalize current-condition">clear</p>
+            </div>
+         
+          </div>
+        </div>
+
+<!--  end of second box -->
+<div class="col-md-3">
+  <div class="inner next-data">
+    <div class="inner-time d-flex justify-content-between flex-wrap">
+      <span class="current-day text-capitalize h4 next-next-day">monday</span>
+      <span class="current-date next-next-date">22/8/2024</span>
+    </div>
+    <div class="inner-data d-flex justify-content-around align-items-center flex-column">
+      <img class="w-25 current-img" src="./imgs/header.png" alt="">
+      <p class="h2 current-temp">34 <sup>o</sup> C</p>
+      <p class="text-capitalize current-condition">clear</p>
+    </div>
+ 
+  </div>
+</div>
+<!--  end of third box -->
+
+<!--  start Humidity change box -->
+  <div class="col-md-2">
+    <div class="inner humidity-box">
+     <div> <span></span></div>
+      <div><span></span></div>
+      <div><span></span></div>
+      <div><span></span></div>
+      
+    </div>
+  </div>
+<!--  End Humidity chang box -->
+</div>
+<!--  End of row -->
+    
+      </div>
+</div>
+
+<section class="container">
+<div class="row mt-5 py-5 g-3">
+
+<div class="col-md-9">
+  <div class="inner wraper">
+    <!-- <iframe class="w-100 my-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110502.61184989335!2d31.176061773263022!3d30.05961134383543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60b21beeb%3A0x79dfb296e8423bba!2sCairo%2C%20Cairo%20Governorate%2C%20Egypt!5e0!3m2!1sen!2ssa!4v1728428717313!5m2!1sen!2ssa" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+
+    <div id="map"></div>
+
+
+  </div>
+</div>
+
+<div class="col-md-3">
+  <div class="inner rounded-3  global-info">
+    <div class="global-temp d-flex mb-2">
+<div class="text d-flex flex-column gap-3">
+<h2 class="text-capitalize h5 intro-name">us</h2>
+<h3 class="text-capitalize intro-city">california</h3>
+<span class="text-capitalize curren-stat national-stat-us">mostly sunny</span>
+</div>
+<div class="show d-flex flex-column justify-content-around text-end position-relative">
+<img class="w-100 national-img-us" src="./imgs/header.png" alt="">
+<span class="national-temp-us">29<sup>o</sup></span>
+</div>
+    </div>
+
+
+    <div class="global-temp d-flex mb-2">
+      <div class="text d-flex flex-column gap-3">
+      <h2 class="text-capitalize h5 china-name">china</h2>
+      <h3 class="text-capitalize bejin-name">beijing</h3>
+      <span class="text-capitalize curren-stat national-stat-ch">mostly sunny</span>
+      </div>
+      <div class="show d-flex flex-column justify-content-around text-end position-relative">
+      <img class="w-100 national-img-ch" src="./imgs/header.png" alt="">
+      <span class="national-temp-ch">29<sup>o</sup></span>
+      </div>
+          </div>
+      
+
+          <div class="global-temp d-flex mb-2">
+            <div class="text d-flex flex-column gap-3">
+            <h2 class="text-capitalize h5 russa-name">russia</h2>
+            <h3 class="text-capitalize russa-city">moskow</h3>
+            <span class="text-capitalize curren-stat national-stat-ru">mostly sunny</span>
+            </div>
+            <div class="show d-flex flex-column justify-content-around text-end position-relative">
+            <img class="w-100 national-img-ru" src="./imgs/header.png" alt="">
+            <span class="national-temp-ru">29<sup>o</sup></span>
+            </div>
+                </div>
+            
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+
+
+</div>
+</section>
+
+
+
+
+      <!--  End of container -->
+    </div>
+   </main>
+
+
+<footer class="sub-footer">
+  <div class="container">
+    <div class="row g-3 p-5">
+
+      <div class="col-md-10">
+        <div class="inner p-2">
+          <p class="validat-alert text-center text-capitalize d-none"> Please Write Valid Email</p>
+        <input class="w-100 p-2 mb-2 subscrip-input" type="email" placeholder="enter your email to subscribe">
+        <button id="subscribeBtn" class="btn btn-outline-primary text-capitalize">subscribe</button>
+        </div>
+      </div>
+
+
+   <div class="sucess-box-aler text-capitalize fs-3 rounded-3 p-2 position-fixed bg-dark text-white d-none d-flex">
+    <p class="success-subcsribe text-white"> Success Subscribe</p>
+    <i class="fa-regular fa-circle-xmark close-icone-alert position-absolute text-warning"></i>
+   </div>
+
+
+
+<div class="col-md-2">
+  <div class="inner">
+    <ul class="list-unstyled d-flex justify-content-center align-items-center gap-2">
+      <li><a href="#">
+        <i class="fa-brands fa-facebook"></i>
+      </a></li>
+      <li><a href="#">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a></li>
+      <li><a href="#">
+        <i class="fa-brands fa-google-plus"></i>
+      </a></li>
+      <li><a href="#">
+        <i class="fa-brands fa-behance"></i>
+      </a></li>
+
+
+
+
+    </ul>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+  <p class="text-center">Copyright 2024. Designed by Khaled Mansour. All rights reserved</p>
+</footer>
+
+
+
+
+
+
+       <!--  leaflet js file library -->
+       <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+    <!--  Bootstrap js file -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!--  main index js file -->
+    <script src="./js/main.js"></script>
+</body>
+</html>

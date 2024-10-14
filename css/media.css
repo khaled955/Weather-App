@@ -1,0 +1,23 @@
+@media screen and (max-width:992px){
+
+nav.my-nav ul a{
+    width: fit-content;
+    padding: 10px 15px;
+}
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width:744px){
+
+    .humidity-box{
+        height: 300px;
+        margin-top: 40px;
+    }
+
+}
