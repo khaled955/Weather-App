@@ -144,7 +144,7 @@ if (e.target.value.length > 0) {
 
 
 
-const api = "http://api.weatherapi.com/v1/forecast.json?key=6754075e9be7416cbd0200928240710&q=26.4667136,50.0826112&days=3"
+const api = "https://api.weatherapi.com/v1/forecast.json?key=6754075e9be7416cbd0200928240710&q=26.4667136,50.0826112&days=3"
 
 
 
@@ -188,7 +188,7 @@ getUserLocation()
 
   async function getDataFromApi(userLocation){
     "use strict"
-let data =  await fetch(`http://api.weatherapi.com/v1/forecast.json?key=6754075e9be7416cbd0200928240710&q=${userLocation}&days=3`)
+let data =  await fetch(`https://api.weatherapi.com/v1/forecast.json?key=6754075e9be7416cbd0200928240710&q=${userLocation}&days=3`)
 let dataList = await data.json()
 
 //  setting current location according to lattitude and langitude
@@ -279,11 +279,11 @@ getUserDay()
 
 
 
-const internationalApi = `http://api.weatherapi.com/v1/current.json?key=6754075e9be7416cbd0200928240710&q=california`
+const internationalApi = `https://api.weatherapi.com/v1/current.json?key=6754075e9be7416cbd0200928240710&q=california`
 
 
  async function getInfoForInternationalCities(){
-let data =  await fetch(`http://api.weatherapi.com/v1/current.json?key=6754075e9be7416cbd0200928240710&q=california`)
+let data =  await fetch(`https://api.weatherapi.com/v1/current.json?key=6754075e9be7416cbd0200928240710&q=california`)
 let dataList = await data.json()
 
 
@@ -301,7 +301,7 @@ getInfoForInternationalCities()
 
 
 async function getInfoForBeijinlCities(){
-    let data =  await fetch(`http://api.weatherapi.com/v1/current.json?key=6754075e9be7416cbd0200928240710&q=Beijin`)
+    let data =  await fetch(`https://api.weatherapi.com/v1/current.json?key=6754075e9be7416cbd0200928240710&q=Beijin`)
     let dataList = await data.json()
 
     
@@ -319,7 +319,7 @@ async function getInfoForBeijinlCities(){
 
 
     async function getInfoForMoscowlCities(){
-        let data =  await fetch(`http://api.weatherapi.com/v1/current.json?key=6754075e9be7416cbd0200928240710&q=moscow`)
+        let data =  await fetch(`https://api.weatherapi.com/v1/current.json?key=6754075e9be7416cbd0200928240710&q=moscow`)
         let dataList = await data.json()
        
         
